@@ -1,0 +1,46 @@
+
+sum=0
+
+ypredict =[2231,
+1663,
+2779,
+7343,
+10751,
+6207,
+18703,
+9615,
+5071,
+3935,
+15295,
+13023,
+17567,
+8479
+]
+yi=[2500,
+2250 ,
+2750 ,
+8000 ,
+9000 ,
+6900 ,
+20000 ,
+8500 ,
+6000 ,
+3500 ,
+15000 ,
+13000 ,
+18000 ,
+7500
+]
+ymean=0
+for num in yi :
+    ymean+=num
+ymean/=14
+sumyi=0
+for num in yi :
+    sumyi = (num-ymean)**2+sumyi
+sumpred=0
+for num in ypredict :
+    sumpred= (num-ymean)**2+sumpred
+
+R2= sumpred/sumyi
+print (R2)

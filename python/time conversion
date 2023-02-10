@@ -1,0 +1,12 @@
+def timeConversion(s):
+    #
+    # Write your code here.
+    #
+    time = s.strip()
+    h, m, s = map(int, time[:-2].split(':'))
+    p = time[-2:]
+    h = h % 12 + (p.upper() == 'PM') * 12
+    str=('{0:02d}:{1:02d}:{2:02d}'.format (h, m, s))
+    return str
+
+print (timeConversion("01:05:50PM"))
